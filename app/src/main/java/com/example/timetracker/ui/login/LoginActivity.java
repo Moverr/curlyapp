@@ -127,12 +127,12 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 loadingProgressBar.setVisibility(View.VISIBLE);
 
-              // loginViewModel.login(usernameEditText.getText().toString(),
-              //           passwordEditText.getText().toString());
-
         //todo: validate the  username and password.
         String username = usernameEditText.getText().toString();
         String password = passwordEditText.getText().toString();
+
+
+        //todo: login in request
 
         if(!username.isEmpty()  && !password.isEmpty()){
             //todo:
