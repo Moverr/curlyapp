@@ -13,7 +13,7 @@ import okhttp3.Response;
 
 public class AuthService {
     private static final String URL = "http://localhost:8080/hrsystem/auth/authenticate";
-    private static final MediaType JSON = MediaType.get("application/json; charset=utf-8");
+    private static final MediaType mediaType = MediaType.get("application/json; charset=utf-8");
 
     private static AuthService instance;
     private AuthService(){
@@ -32,13 +32,12 @@ public class AuthService {
         Gson gson = new Gson();
         String json = gson.toJson(requestBody);
 
-        RequestBody body = RequestBody.create(json, JSON);
+        RequestBody body = RequestBody.create(json, mediaType);
 
         Request request = new Request.Builder()
                 .url(URL)
                 .post(body)
                 .addHeader("Content-Type", "application/json")
-                .addHeader("Cookie", "PHPSESSID=c2kke69srcq6j07t7ke5c8qe4m")
                 .build();
 
 
