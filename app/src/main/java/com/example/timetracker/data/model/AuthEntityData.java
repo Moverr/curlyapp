@@ -1,5 +1,7 @@
 package com.example.timetracker.data.model;
 
+import androidx.annotation.NonNull;
+
 public class AuthEntityData {
 
     private String token;
@@ -11,5 +13,12 @@ public class AuthEntityData {
     public User getUser() { return user; }
     public void setUser(User value) { this.user = value; }
 
-
+    @NonNull
+    @Override
+    public String toString() {
+        return "AuthEntityData{" +
+                "token='" + token + '\'' +
+                ", user=" + user +
+                '}';
+    }
 }
