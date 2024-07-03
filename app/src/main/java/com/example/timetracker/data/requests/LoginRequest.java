@@ -6,6 +6,8 @@ import java.util.Objects;
 public class LoginRequest {
     private String username;
     private  String password;
+    //mode
+    private final String mode = "token";
 
     public LoginRequest(String username, String password) {
         this.username = username;
@@ -26,6 +28,10 @@ public class LoginRequest {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getMode() {
+        return mode;
     }
 
     @Override

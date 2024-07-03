@@ -9,8 +9,8 @@ public class User {
     private String id;
     private String status;
     private String role;
-    private String firstName;
-    private String lastName;
+    private String first_name;
+    private String last_name;
     private String email;
     private String timezone;
     private String locale;
@@ -51,20 +51,20 @@ public class User {
         this.role = role;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirst_name() {
+        return first_name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirst_name(String first_name) {
+        this.first_name = first_name;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLast_name() {
+        return last_name;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLast_name(String last_name) {
+        this.last_name = last_name;
     }
 
     public String getEmail() {
@@ -160,12 +160,12 @@ public class User {
         if (this == o) return true;
         if (!(o instanceof User)) return false;
         User user = (User) o;
-        return Objects.equals(getId(), user.getId()) && Objects.equals(getStatus(), user.getStatus()) && Objects.equals(getRole(), user.getRole()) && Objects.equals(getFirstName(), user.getFirstName()) && Objects.equals(getLastName(), user.getLastName()) && Objects.equals(getEmail(), user.getEmail()) && Objects.equals(getTimezone(), user.getTimezone()) && Objects.equals(getLocale(), user.getLocale()) && Objects.equals(getLocaleOptions(), user.getLocaleOptions()) && Objects.equals(getAvatar(), user.getAvatar()) && Objects.equals(getCompany(), user.getCompany()) && Objects.equals(getTitle(), user.getTitle()) && Objects.equals(getExternalID(), user.getExternalID()) && Objects.equals(getTheme(), user.getTheme()) && Objects.equals(getThe2FaSecret(), user.getThe2FaSecret()) && Objects.equals(getPasswordResetToken(), user.getPasswordResetToken());
+        return Objects.equals(getId(), user.getId()) && Objects.equals(getStatus(), user.getStatus()) && Objects.equals(getRole(), user.getRole()) && Objects.equals(getFirst_name(), user.getFirst_name()) && Objects.equals(getLast_name(), user.getLast_name()) && Objects.equals(getEmail(), user.getEmail()) && Objects.equals(getTimezone(), user.getTimezone()) && Objects.equals(getLocale(), user.getLocale()) && Objects.equals(getLocaleOptions(), user.getLocaleOptions()) && Objects.equals(getAvatar(), user.getAvatar()) && Objects.equals(getCompany(), user.getCompany()) && Objects.equals(getTitle(), user.getTitle()) && Objects.equals(getExternalID(), user.getExternalID()) && Objects.equals(getTheme(), user.getTheme()) && Objects.equals(getThe2FaSecret(), user.getThe2FaSecret()) && Objects.equals(getPasswordResetToken(), user.getPasswordResetToken());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getStatus(), getRole(), getFirstName(), getLastName(), getEmail(), getTimezone(), getLocale(), getLocaleOptions(), getAvatar(), getCompany(), getTitle(), getExternalID(), getTheme(), getThe2FaSecret(), getPasswordResetToken());
+        return Objects.hash(getId(), getStatus(), getRole(), getFirst_name(), getLast_name(), getEmail(), getTimezone(), getLocale(), getLocaleOptions(), getAvatar(), getCompany(), getTitle(), getExternalID(), getTheme(), getThe2FaSecret(), getPasswordResetToken());
     }
 
     @NonNull
@@ -175,8 +175,8 @@ public class User {
                 "id='" + id + '\'' +
                 ", status='" + status + '\'' +
                 ", role='" + role + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
+                ", first_name='" + first_name + '\'' +
+                ", last_name='" + last_name + '\'' +
                 ", email='" + email + '\'' +
                 ", timezone='" + timezone + '\'' +
                 ", locale='" + locale + '\'' +
