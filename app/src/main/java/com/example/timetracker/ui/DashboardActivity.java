@@ -14,6 +14,7 @@ import com.example.timetracker.R;
 
 public class DashboardActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,12 +28,12 @@ public class DashboardActivity extends AppCompatActivity {
     }
 
     public void checkoutHandler(View view) {
-        Intent i = new Intent(DashboardActivity.this,CheckinActivity.class);
+        Intent i = new Intent(DashboardActivity.this,CheckoutActivity.class);
         startActivity(i);
     }
 
     public void checkinHandler(View view) {
-        Intent i = new Intent(DashboardActivity.this,CheckoutActivity.class);
+        Intent i = new Intent(DashboardActivity.this,CheckinActivity.class);
         startActivity(i);
     }
 }
